@@ -1,0 +1,146 @@
+<div id="container">
+  <div id="rule-list">
+    <ul></ul>
+    <p id="no-rules-tip">Click 'Add a rule' to start the game.</p>
+  </div>
+  <div id="buttons">
+    <button type="button" id="restart"> Restart </button>
+    <button type="button" id="add-rule"> Add a rule </button>
+  </div>
+</div>
+
+<script>
+  import rulesList from "../assets/rules.json";
+  let availableRules = rulesList;
+
+  const list = document.querySelector("ul");
+  const noRulesTip = document.querySelector("#no-rules-tip");
+  const localStorageKey = "rules";
+
+  type RuleEntry = {
+    rule: string;
+    exclusive: string | undefined;
+  }
+
+  function getRules(): string[] {
+    return JSON.parse(window.localStorage.getItem(localStorageKey) ?? "[]");
+  }
+
+  function selectRule(): string {
+    let filteredRules = availableRules;
+    console.log(availableRules);
+    if (getRules().length === 0) {
+      filteredRules = filteredRules.filter((rule) => rule["difficulty"] !== "hard")
+    }
+    const newRule = filteredRules[Math.floor(Math.random() * filteredRules.length)];
+    availableRules = availableRules.filter((rule) => rule["rule"] !== newRule["rule"])
+    if (newRule["exclusive"]) {
+      availableRules = availableRules.filter((rule) => rule["exclusive"] !== newRule["exclusive"])
+    }
+    return newRule["rule"];
+  }
+
+  function addRuleElement(rule: string) {
+    const elem = document.createElement("li");
+    elem.innerText = rule;
+    list?.appendChild(elem);
+    elem.scrollIntoView(false);
+  }
+
+  function addRule(rule: string) {
+    let rules = getRules();
+    rules.push(rule);
+    window.localStorage.setItem(localStorageKey, JSON.stringify(rules));
+    addRuleElement(rule);
+  }
+
+  addEventListener("load", () => {
+    let rules = getRules();
+    if (rules.length > 0) {
+      noRulesTip?.classList.add("hidden");
+      for (const rule of rules) {
+        addRuleElement(rule);
+      }
+    }
+  });
+
+  document.querySelector("#add-rule")?.addEventListener("click", () => {
+    noRulesTip?.classList.add("hidden");
+    addRule(selectRule());
+  });
+
+  document.querySelector("#restart")?.addEventListener("click", () => {
+    noRulesTip?.classList.remove("hidden");
+    list?.replaceChildren();
+    window.localStorage.removeItem(localStorageKey);
+    availableRules = rulesList;
+  });
+</script>
+
+<style>
+  #container {
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 50svh;
+  }
+
+  #no-rules-tip {
+    opacity: 50%;
+    text-align: center;
+    padding: 1rem;
+    &.hidden {
+      display: none;
+    }
+  }
+
+  #buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+
+      color: inherit;
+      background-color: oklch(0.125 0 0);
+      border: 1px solid oklch(0.25 0 0);
+      border-radius: 8px;
+
+      transition: background-color 100ms ease-out;
+      &:hover,
+      &:focus-visible {
+        background-color: oklch(0.2 0 0);
+      }
+      &:active {
+        background-color: oklch(0.175 0 0);
+      }
+    }
+  }
+
+  #rule-list {
+    padding: 0.25rem 1.5rem;
+    max-height: 30rem;
+    overflow-y: scroll;
+
+    border: 1px solid oklch(0.25 0 0);
+    background-color: oklch(0.125 0 0);
+    border-radius: 8px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul :global(li) {
+    list-style: none;
+    font-size: 1.25rem;
+    padding-block: 0.75rem;
+  }
+  ul :global(li):not(:last-of-type) {
+    border-bottom: 1px solid oklch(0.25 0 0);
+  }
+</style>

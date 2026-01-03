@@ -1,0 +1,225 @@
+[
+  {
+    "rule": "Speak in a monotone voice",
+    "exclusive": "tone",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak like a radio host",
+    "exclusive": "tone",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak like a drunk person",
+    "exclusive": "tone",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak like someone about to throw up",
+    "exclusive": "tone",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak very slowly",
+    "exclusive": "speed",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak very quickly",
+    "exclusive": "speed",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a British accent",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a Texan accent",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a Jamaican accent",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a Russian accent",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a Valley Girl accent",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Speak with a nerd voice",
+    "exclusive": "accent",
+    "difficulty": "easy"
+  },
+  {
+    "rule": "Act like a villain monologueing",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like you're explaining something to a child",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act playfully annoyed",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act shy",
+    "exclusive": "confidence",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act overly confident",
+    "exclusive": "confidence",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like an old person",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like you have dementia",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like a rich person",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like an NPC with limited dialogue",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like a therapist",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like you're hiding a secret",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like you're flirting badly",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Take everything as a metaphor",
+    "exclusive": "literal",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Take everything literally",
+    "exclusive": "literal",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Take everything as an insult",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Act like a conspiracy theorist",
+    "exclusive": "skepticism",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be extremely skeptical",
+    "exclusive": "skepticism",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be extremely open-minded",
+    "exclusive": "skepticism",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be overly optimistic",
+    "exclusive": "mood",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be overly pessimistic",
+    "exclusive": "mood",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be extremely polite",
+    "exclusive": "polite",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be extremely sarcastic",
+    "exclusive": "polite",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Be politically incorrect",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Overthink everything",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Misunderstand everything",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Overexplain everything",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Start every sentence with 'bro'",
+    "exclusive": "start",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Start every sentence with 'listen...'",
+    "exclusive": "start",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Start every sentence with 'Robin says'",
+    "exclusive": "start",
+    "difficulty": "normal"
+  },
+  {
+    "rule": "Make every moment awkward",
+    "difficulty": "normal"
+  },
+
+  {
+    "rule": "Don't use the word 'I'",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "Don't use the word 'and'",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "Don't use the word 'you'",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "Don't use the words 'yes' or 'no'",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "Don't ask any questions",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "Speak only in rhyme",
+    "difficulty": "hard"
+  },
+  {
+    "rule": "In every sentence, use at least one foreign word",
+    "difficulty": "hard"
+  }
+]
